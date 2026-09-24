@@ -10,8 +10,8 @@
     --dark: #1b1917;
     --brown: #806b57;
     --muted: #746d65;
-    --white: #ffffff;
-    --border: rgba(27, 25, 23, 0.14);
+    --white: #fff;
+    --border: rgba(27, 25, 23, .14);
 }
 
 
@@ -67,7 +67,6 @@ img {
     left: 0;
 
     width: 100%;
-
     z-index: 10;
 
     padding: 28px 0;
@@ -80,9 +79,6 @@ img {
     align-items: center;
     justify-content: space-between;
 }
-
-
-/* LOGO */
 
 .logo {
     display: flex;
@@ -102,12 +98,8 @@ img {
     font-weight: 500;
 
     letter-spacing: 1.8px;
-
-    opacity: 0.75;
+    opacity: .75;
 }
-
-
-/* NAV */
 
 .navigation {
     display: flex;
@@ -117,26 +109,22 @@ img {
 }
 
 .navigation a {
-    opacity: 0.85;
-
-    transition: 0.25s ease;
+    opacity: .85;
+    transition: .25s ease;
 }
 
 .navigation a:hover {
     opacity: 1;
 }
 
-
-/* HEADER BUTTON */
-
 .header-button {
     padding: 11px 19px;
 
-    border: 1px solid rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255,255,255,.55);
 
     font-size: 12px;
 
-    transition: 0.25s ease;
+    transition: .25s ease;
 }
 
 .header-button:hover {
@@ -164,8 +152,8 @@ img {
     background:
         linear-gradient(
             90deg,
-            rgba(15, 13, 11, 0.78),
-            rgba(15, 13, 11, 0.35)
+            rgba(15,13,11,.78),
+            rgba(15,13,11,.35)
         ),
         url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2000&q=90")
         center / cover;
@@ -173,7 +161,6 @@ img {
 
 .hero-content {
     width: min(1120px, calc(100% - 100px));
-
     margin: 0 auto;
 
     padding-top: 70px;
@@ -183,12 +170,11 @@ img {
     margin-bottom: 25px;
 
     font-size: 10px;
+    font-weight: 600;
 
     letter-spacing: 2px;
 
-    font-weight: 600;
-
-    opacity: 0.75;
+    opacity: .75;
 }
 
 .hero h1 {
@@ -197,11 +183,9 @@ img {
     font-family: "Playfair Display", serif;
 
     font-size: clamp(58px, 7vw, 105px);
-
     font-weight: 500;
 
-    line-height: 0.98;
-
+    line-height: .98;
     letter-spacing: -3px;
 }
 
@@ -214,17 +198,13 @@ img {
 
     margin-top: 28px;
 
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255,255,255,.78);
 
     font-size: 15px;
 }
 
-
-/* HERO BUTTONS */
-
 .hero-actions {
     display: flex;
-
     gap: 12px;
 
     margin-top: 35px;
@@ -245,7 +225,7 @@ img {
     font-size: 12px;
     font-weight: 600;
 
-    transition: 0.25s ease;
+    transition: .25s ease;
 }
 
 .button:hover {
@@ -254,20 +234,15 @@ img {
 
 .button-outline {
     background: transparent;
-
     color: var(--white);
 
-    border: 1px solid rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255,255,255,.55);
 }
 
 .button-outline:hover {
     background: var(--white);
-
     color: var(--dark);
 }
-
-
-/* HERO BOTTOM */
 
 .hero-bottom {
     position: absolute;
@@ -280,14 +255,12 @@ img {
     transform: translateX(-50%);
 
     display: flex;
-
     justify-content: space-between;
 
     font-size: 9px;
-
     letter-spacing: 2px;
 
-    opacity: 0.7;
+    opacity: .7;
 }
 
 
@@ -305,16 +278,15 @@ img {
     color: var(--brown);
 
     font-size: 10px;
+    font-weight: 600;
 
     letter-spacing: 2px;
-
-    font-weight: 600;
 }
 
 .intro-content {
     display: grid;
 
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1.2fr .8fr;
 
     gap: 80px;
 
@@ -329,7 +301,6 @@ img {
     font-weight: 500;
 
     line-height: 1;
-
     letter-spacing: -2px;
 }
 
@@ -389,9 +360,6 @@ img {
     font-size: 14px;
 }
 
-
-/* MENU IMAGES */
-
 .menu-showcase {
     display: grid;
 
@@ -411,14 +379,12 @@ img {
 }
 
 .showcase-image img {
-    display: block;
-
     width: 100%;
     height: auto;
 
     object-fit: contain;
 
-    transition: transform 0.6s ease;
+    transition: transform .6s ease;
 }
 
 .showcase-image:hover img {
@@ -429,14 +395,13 @@ img {
     content: "";
 
     position: absolute;
-
     inset: 0;
 
     background:
         linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.02)
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.02)
         );
 
     pointer-events: none;
@@ -461,22 +426,17 @@ img {
 
 .showcase-caption span {
     font-size: 9px;
-
     letter-spacing: 2px;
 
-    opacity: 0.75;
+    opacity: .75;
 }
 
 .showcase-caption strong {
     font-family: "Playfair Display", serif;
 
     font-size: 32px;
-
     font-weight: 500;
 }
-
-
-/* MENU BUTTON */
 
 .menu-button {
     margin-top: 40px;
@@ -484,8 +444,7 @@ img {
 
 
 /* =========================================================
-   BAKERY
-   ОТДЕЛЬНЫЙ ВИЗУАЛЬНЫЙ БЛОК
+   BAKERY — ОСНОВНОЙ БЛОК
 ========================================================= */
 
 .bakery {
@@ -495,16 +454,16 @@ img {
 }
 
 
-/* MAIN CARD */
+/* ВНЕШНЯЯ КАРТОЧКА */
 
 .bakery-card {
     position: relative;
 
     display: grid;
 
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.1fr .9fr;
 
-    min-height: 540px;
+    min-height: 560px;
 
     overflow: hidden;
 
@@ -512,20 +471,20 @@ img {
 }
 
 
-/* DECORATIVE CIRCLE */
+/* ДЕКОРАТИВНЫЙ КРУГ */
 
 .bakery-card::before {
     content: "";
 
     position: absolute;
 
-    width: 470px;
-    height: 470px;
+    width: 480px;
+    height: 480px;
 
-    left: -230px;
-    bottom: -270px;
+    left: -250px;
+    bottom: -280px;
 
-    border: 1px solid rgba(128, 107, 87, 0.2);
+    border: 1px solid rgba(128,107,87,.18);
 
     border-radius: 50%;
 
@@ -546,30 +505,93 @@ img {
 
     flex-direction: column;
 
+    align-items: center;
+
     justify-content: center;
 
-    padding: 75px;
+    padding: 65px;
+
+    text-align: center;
+}
+
+
+/* ЦЕНТРАЛЬНОЕ ОКНО */
+
+.bakery-card-left::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: calc(100% - 110px);
+    height: calc(100% - 110px);
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(27,25,23,.22);
+
+    background: rgba(255,255,255,.07);
+
+    box-shadow:
+        inset 0 0 0 8px rgba(255,255,255,.045);
+
+    pointer-events: none;
+}
+
+
+/* ВТОРАЯ ТОНКАЯ РАМКА */
+
+.bakery-card-left::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: calc(100% - 140px);
+    height: calc(100% - 140px);
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(27,25,23,.08);
+
+    pointer-events: none;
+}
+
+
+/* КОНТЕНТ ПОВЕРХ РАМОК */
+
+.bakery-badge,
+.bakery-card h2,
+.bakery-line,
+.bakery-card-left > p,
+.bakery-button {
+    position: relative;
+
+    z-index: 3;
 }
 
 
 /* BADGE */
 
 .bakery-badge {
-    width: fit-content;
+    margin-bottom: 28px;
 
-    margin-bottom: 30px;
+    padding: 8px 13px;
 
-    padding: 8px 12px;
+    border: 1px solid rgba(27,25,23,.28);
 
-    border: 1px solid rgba(27, 25, 23, 0.25);
+    background: rgba(221,208,194,.75);
 
     color: var(--brown);
 
-    font-size: 9px;
-
+    font-size: 8px;
     font-weight: 600;
 
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
 }
 
 
@@ -578,11 +600,11 @@ img {
 .bakery-card h2 {
     font-family: "Playfair Display", serif;
 
-    font-size: clamp(60px, 7vw, 96px);
+    font-size: clamp(60px, 6.5vw, 90px);
 
     font-weight: 500;
 
-    line-height: 0.9;
+    line-height: .9;
 
     letter-spacing: -4px;
 }
@@ -597,26 +619,25 @@ img {
 /* LINE */
 
 .bakery-line {
-    width: 80px;
-
+    width: 70px;
     height: 1px;
 
-    margin: 35px 0 25px;
+    margin: 27px auto 21px;
 
     background: var(--brown);
 }
 
 
-/* TEXT */
+/* DESCRIPTION */
 
 .bakery-card-left > p {
-    max-width: 390px;
+    max-width: 350px;
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
 
@@ -629,25 +650,24 @@ img {
 
     justify-content: space-between;
 
-    width: 190px;
+    width: 185px;
 
-    margin-top: 30px;
+    margin-top: 27px;
 
-    padding: 15px 18px;
+    padding: 14px 17px;
 
     background: var(--dark);
 
     color: var(--white);
 
-    font-size: 11px;
-
+    font-size: 10px;
     font-weight: 600;
 
-    transition: 0.25s ease;
+    transition: .25s ease;
 }
 
 .bakery-button span:last-child {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .bakery-button:hover {
@@ -692,7 +712,7 @@ img {
 
     justify-content: center;
 
-    border: 1px solid rgba(27, 25, 23, 0.3);
+    border: 1px solid rgba(27,25,23,.3);
 
     border-radius: 50%;
 
@@ -715,7 +735,6 @@ img {
     font-family: "Playfair Display", serif;
 
     font-size: 58px;
-
     font-weight: 500;
 }
 
@@ -737,14 +756,13 @@ img {
 
     padding: 13px 0;
 
-    border-top: 1px solid rgba(27, 25, 23, 0.18);
+    border-top: 1px solid rgba(27,25,23,.18);
 }
 
 .bakery-list span {
     color: var(--brown);
 
     font-size: 9px;
-
     font-weight: 600;
 
     letter-spacing: 1px;
@@ -765,19 +783,18 @@ img {
     top: 22px;
     right: 25px;
 
-    color: rgba(27, 25, 23, 0.45);
+    color: rgba(27,25,23,.45);
 
     font-size: 9px;
-
     font-weight: 600;
 
     letter-spacing: 2px;
 }
 
 
-/* =========================================================
+/* =========================
    ABOUT
-========================================================= */
+========================= */
 
 .about {
     padding: 120px 0;
@@ -817,7 +834,7 @@ img {
 
     font-size: clamp(48px, 5vw, 72px);
 
-    line-height: 0.98;
+    line-height: .98;
 
     font-weight: 500;
 
@@ -833,7 +850,7 @@ img {
 
     margin-top: 28px;
 
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255,255,255,.65);
 
     font-size: 15px;
 }
@@ -845,7 +862,7 @@ img {
 
     padding-bottom: 7px;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255,255,255,.4);
 
     font-size: 12px;
 }
@@ -871,13 +888,10 @@ img {
     font-style: italic;
 }
 
-
-/* CONTACT GRID */
-
 .contacts-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
 
     gap: 30px;
 
@@ -914,7 +928,7 @@ img {
 .contact-item a {
     margin-bottom: 8px;
 
-    transition: 0.25s ease;
+    transition: .25s ease;
 }
 
 .contact-item a:hover {
@@ -953,7 +967,7 @@ img {
 
     letter-spacing: 1px;
 
-    opacity: 0.6;
+    opacity: .6;
 }
 
 
@@ -969,11 +983,9 @@ img {
         width: min(100% - 40px, 700px);
     }
 
-
     .navigation {
         display: none;
     }
-
 
     .intro-content {
         grid-template-columns: 1fr;
@@ -981,13 +993,11 @@ img {
         gap: 40px;
     }
 
-
     .section-heading {
         flex-direction: column;
 
         align-items: flex-start;
     }
-
 
     .menu-showcase {
         grid-template-columns: 1fr 1fr;
@@ -995,13 +1005,11 @@ img {
         gap: 20px;
     }
 
-
     .about-grid {
         grid-template-columns: 1fr;
 
         gap: 50px;
     }
-
 
     .contacts-grid {
         grid-template-columns: 1fr;
@@ -1013,11 +1021,21 @@ img {
     /* BAKERY */
 
     .bakery-card {
-        grid-template-columns: 1fr 0.85fr;
+        grid-template-columns: 1fr .85fr;
     }
 
     .bakery-card-left {
-        padding: 55px;
+        padding: 50px;
+    }
+
+    .bakery-card-left::before {
+        width: calc(100% - 80px);
+        height: calc(100% - 80px);
+    }
+
+    .bakery-card-left::after {
+        width: calc(100% - 110px);
+        height: calc(100% - 110px);
     }
 
     .bakery-card-right {
@@ -1032,7 +1050,6 @@ img {
     .bakery-circle strong {
         font-size: 48px;
     }
-
 }
 
 
@@ -1180,7 +1197,6 @@ img {
 
     .showcase-image img {
         width: 100%;
-
         height: auto;
     }
 
@@ -1213,73 +1229,78 @@ img {
         padding: 70px 0 90px;
     }
 
-
     .bakery-card {
         display: block;
     }
 
-
     .bakery-card-left {
-        padding: 45px 28px 55px;
+        min-height: 540px;
+
+        padding: 50px 25px;
     }
 
+    .bakery-card-left::before {
+        width: calc(100% - 45px);
+        height: calc(100% - 55px);
+    }
+
+    .bakery-card-left::after {
+        width: calc(100% - 70px);
+        height: calc(100% - 80px);
+    }
 
     .bakery-badge {
-        margin-bottom: 25px;
+        margin-bottom: 24px;
 
-        font-size: 8px;
+        padding: 7px 10px;
+
+        font-size: 7px;
     }
-
 
     .bakery-card h2 {
-        font-size: 54px;
+        font-size: 52px;
 
-        letter-spacing: -2.5px;
+        letter-spacing: -2px;
     }
-
 
     .bakery-line {
-        margin: 28px 0 20px;
-    }
+        width: 55px;
 
+        margin: 25px auto 19px;
+    }
 
     .bakery-card-left > p {
-        font-size: 13px;
-    }
+        max-width: 280px;
 
+        font-size: 12px;
+    }
 
     .bakery-button {
-        width: 180px;
+        width: 175px;
 
-        margin-top: 25px;
+        margin-top: 24px;
     }
-
 
     .bakery-card-right {
         padding: 45px 28px;
     }
-
 
     .bakery-circle {
         width: 190px;
         height: 190px;
     }
 
-
     .bakery-circle strong {
         font-size: 46px;
     }
-
 
     .bakery-list {
         margin-top: 35px;
     }
 
-
     .bakery-list > div {
         padding: 12px 0;
     }
-
 
     .bakery-number {
         top: 17px;
@@ -1299,7 +1320,6 @@ img {
 
     .about-image img {
         width: 100%;
-
         height: auto;
     }
 
@@ -1357,11 +1377,6 @@ img {
     .footer span {
         font-size: 8px;
     }
-
 }
 
-Это один цельный CSS, а не кусок, который надо угадывать куда вставлять. После вставки у тебя структура будет:
-
-Hero → Welcome → Kitchen & Bar → отдельный Bakery-блок → About → Contacts → Footer.
-
-Если вставишь этот CSS целиком вместе с HTML выше, ".bakery-card" будет именно отдельной большой визуальной карточкой, а не просто текстом на фоне.
+.
