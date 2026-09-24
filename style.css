@@ -2,7 +2,7 @@
 
 
 /* =========================
-   ROOT
+   VARIABLES
 ========================= */
 
 :root {
@@ -11,7 +11,6 @@
     --brown: #806b57;
     --muted: #746d65;
     --white: #ffffff;
-    --light: #e5dbd0;
     --border: rgba(27, 25, 23, 0.14);
 }
 
@@ -47,6 +46,11 @@ img {
     max-width: 100%;
 }
 
+
+/* =========================
+   CONTAINER
+========================= */
+
 .container {
     width: min(1120px, calc(100% - 100px));
     margin: 0 auto;
@@ -64,7 +68,7 @@ img {
 
     width: 100%;
 
-    z-index: 20;
+    z-index: 10;
 
     padding: 28px 0;
 
@@ -76,6 +80,9 @@ img {
     align-items: center;
     justify-content: space-between;
 }
+
+
+/* LOGO */
 
 .logo {
     display: flex;
@@ -99,6 +106,9 @@ img {
     opacity: 0.75;
 }
 
+
+/* NAV */
+
 .navigation {
     display: flex;
     gap: 30px;
@@ -107,7 +117,7 @@ img {
 }
 
 .navigation a {
-    opacity: 0.8;
+    opacity: 0.85;
 
     transition: 0.25s ease;
 }
@@ -116,10 +126,13 @@ img {
     opacity: 1;
 }
 
+
+/* HEADER BUTTON */
+
 .header-button {
     padding: 11px 19px;
 
-    border: 1px solid rgba(255,255,255,0.55);
+    border: 1px solid rgba(255, 255, 255, 0.55);
 
     font-size: 12px;
 
@@ -151,8 +164,8 @@ img {
     background:
         linear-gradient(
             90deg,
-            rgba(15,13,11,0.8),
-            rgba(15,13,11,0.32)
+            rgba(15, 13, 11, 0.78),
+            rgba(15, 13, 11, 0.35)
         ),
         url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2000&q=90")
         center / cover;
@@ -170,9 +183,10 @@ img {
     margin-bottom: 25px;
 
     font-size: 10px;
-    font-weight: 600;
 
     letter-spacing: 2px;
+
+    font-weight: 600;
 
     opacity: 0.75;
 }
@@ -200,13 +214,17 @@ img {
 
     margin-top: 28px;
 
-    color: rgba(255,255,255,0.78);
+    color: rgba(255, 255, 255, 0.78);
 
     font-size: 15px;
 }
 
+
+/* HERO BUTTONS */
+
 .hero-actions {
     display: flex;
+
     gap: 12px;
 
     margin-top: 35px;
@@ -239,25 +257,30 @@ img {
 
     color: var(--white);
 
-    border: 1px solid rgba(255,255,255,0.55);
+    border: 1px solid rgba(255, 255, 255, 0.55);
 }
 
 .button-outline:hover {
     background: var(--white);
+
     color: var(--dark);
 }
+
+
+/* HERO BOTTOM */
 
 .hero-bottom {
     position: absolute;
 
-    left: 50%;
     bottom: 30px;
+    left: 50%;
 
     width: min(1120px, calc(100% - 100px));
 
     transform: translateX(-50%);
 
     display: flex;
+
     justify-content: space-between;
 
     font-size: 9px;
@@ -269,8 +292,12 @@ img {
 
 
 /* =========================
-   GENERAL TYPOGRAPHY
+   INTRO
 ========================= */
+
+.intro {
+    padding: 150px 0;
+}
 
 .section-label {
     margin-bottom: 30px;
@@ -278,18 +305,10 @@ img {
     color: var(--brown);
 
     font-size: 10px;
-    font-weight: 600;
 
     letter-spacing: 2px;
-}
 
-
-/* =========================
-   INTRO
-========================= */
-
-.intro {
-    padding: 150px 0;
+    font-weight: 600;
 }
 
 .intro-content {
@@ -302,16 +321,20 @@ img {
     align-items: end;
 }
 
-.intro h2 {
+.intro h2,
+.section-heading h2,
+.contacts h2 {
     font-family: "Playfair Display", serif;
-
-    font-size: clamp(48px, 6vw, 82px);
 
     font-weight: 500;
 
     line-height: 1;
 
     letter-spacing: -2px;
+}
+
+.intro h2 {
+    font-size: clamp(48px, 6vw, 82px);
 }
 
 .intro h2 span {
@@ -341,6 +364,7 @@ img {
 
 .section-heading {
     display: flex;
+
     justify-content: space-between;
     align-items: end;
 
@@ -350,15 +374,7 @@ img {
 }
 
 .section-heading h2 {
-    font-family: "Playfair Display", serif;
-
     font-size: clamp(48px, 5vw, 72px);
-
-    font-weight: 500;
-
-    line-height: 1;
-
-    letter-spacing: -2px;
 }
 
 .section-heading h2 em {
@@ -374,9 +390,7 @@ img {
 }
 
 
-/* =========================
-   MENU PHOTOS
-========================= */
+/* MENU IMAGES */
 
 .menu-showcase {
     display: grid;
@@ -397,6 +411,8 @@ img {
 }
 
 .showcase-image img {
+    display: block;
+
     width: 100%;
     height: auto;
 
@@ -419,8 +435,8 @@ img {
     background:
         linear-gradient(
             to top,
-            rgba(0,0,0,0.65),
-            rgba(0,0,0,0.02)
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.02)
         );
 
     pointer-events: none;
@@ -455,93 +471,147 @@ img {
     font-family: "Playfair Display", serif;
 
     font-size: 32px;
+
     font-weight: 500;
 }
+
+
+/* MENU BUTTON */
 
 .menu-button {
     margin-top: 40px;
 }
 
 
-/* =========================
+/* =========================================================
    BAKERY
-========================= */
+   ОТДЕЛЬНЫЙ ВИЗУАЛЬНЫЙ БЛОК
+========================================================= */
 
 .bakery {
-    padding: 40px 0 150px;
+    padding: 100px 0 150px;
+
+    background: var(--bg);
 }
 
-.bakery-section {
+
+/* MAIN CARD */
+
+.bakery-card {
     position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    min-height: 540px;
 
     overflow: hidden;
 
-    background: var(--light);
-
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    background: #ddd0c2;
 }
 
 
-/* HEADER */
+/* DECORATIVE CIRCLE */
 
-.bakery-header {
+.bakery-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 470px;
+    height: 470px;
+
+    left: -230px;
+    bottom: -270px;
+
+    border: 1px solid rgba(128, 107, 87, 0.2);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   BAKERY LEFT
+========================= */
+
+.bakery-card-left {
+    position: relative;
+
+    z-index: 2;
+
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
 
-    padding: 35px 40px 0;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 75px;
 }
 
-.bakery-header .section-label {
-    margin-bottom: 25px;
+
+/* BADGE */
+
+.bakery-badge {
+    width: fit-content;
+
+    margin-bottom: 30px;
+
+    padding: 8px 12px;
+
+    border: 1px solid rgba(27, 25, 23, 0.25);
+
+    color: var(--brown);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
 }
 
-.bakery-header h2 {
+
+/* TITLE */
+
+.bakery-card h2 {
     font-family: "Playfair Display", serif;
 
-    font-size: clamp(55px, 7vw, 90px);
+    font-size: clamp(60px, 7vw, 96px);
 
     font-weight: 500;
 
-    line-height: 0.92;
+    line-height: 0.9;
 
-    letter-spacing: -3px;
+    letter-spacing: -4px;
 }
 
-.bakery-header h2 em {
+.bakery-card h2 em {
     color: var(--brown);
 
     font-style: italic;
 }
 
-.bakery-number {
-    color: var(--brown);
 
-    font-size: 10px;
-    font-weight: 600;
+/* LINE */
 
-    letter-spacing: 3px;
+.bakery-line {
+    width: 80px;
+
+    height: 1px;
+
+    margin: 35px 0 25px;
+
+    background: var(--brown);
 }
 
 
-/* CONTENT */
+/* TEXT */
 
-.bakery-content {
-    display: grid;
-
-    grid-template-columns: 0.9fr 1.1fr;
-
-    gap: 90px;
-
-    padding: 80px 70px 90px;
-}
-
-.bakery-description {
+.bakery-card-left > p {
     max-width: 390px;
-}
 
-.bakery-description p {
     color: var(--muted);
 
     font-size: 14px;
@@ -549,120 +619,165 @@ img {
     line-height: 1.75;
 }
 
-.bakery-description .bakery-lead {
-    margin-bottom: 22px;
 
-    color: var(--dark);
+/* BUTTON */
 
-    font-size: 19px;
+.bakery-button {
+    display: inline-flex;
 
-    line-height: 1.5;
-}
-
-
-/* DETAILS */
-
-.bakery-details {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-.bakery-detail {
-    padding-top: 18px;
-
-    border-top: 1px solid rgba(27,25,23,0.2);
-}
-
-.bakery-detail span {
-    display: block;
-
-    margin-bottom: 16px;
-
-    color: var(--brown);
-
-    font-size: 9px;
-    font-weight: 600;
-
-    letter-spacing: 2px;
-}
-
-.bakery-detail p {
-    color: var(--muted);
-
-    font-size: 12px;
-
-    line-height: 1.65;
-}
-
-
-/* FOOTER */
-
-.bakery-footer {
-    display: flex;
     align-items: center;
+
     justify-content: space-between;
 
-    padding: 20px 40px;
+    width: 190px;
 
-    border-top: 1px solid rgba(27,25,23,0.15);
-}
+    margin-top: 30px;
 
-.bakery-footer > span {
-    color: var(--brown);
+    padding: 15px 18px;
 
-    font-size: 8px;
-    font-weight: 600;
+    background: var(--dark);
 
-    letter-spacing: 2px;
-}
-
-.bakery-footer a {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 18px;
+    color: var(--white);
 
     font-size: 11px;
+
     font-weight: 600;
 
     transition: 0.25s ease;
 }
 
-.bakery-footer a:hover {
-    color: var(--brown);
-
-    transform: translateX(4px);
+.bakery-button span:last-child {
+    font-size: 17px;
 }
 
+.bakery-button:hover {
+    background: var(--brown);
 
-/* DECORATION */
-
-.bakery-section::before {
-    content: "MON";
-
-    position: absolute;
-
-    right: -25px;
-    top: 80px;
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 210px;
-
-    line-height: 1;
-
-    color: rgba(128,107,87,0.055);
-
-    pointer-events: none;
+    transform: translateY(-2px);
 }
 
 
 /* =========================
-   ABOUT
+   BAKERY RIGHT
 ========================= */
+
+.bakery-card-right {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 55px;
+
+    background: #cbbbaa;
+}
+
+
+/* CIRCLE */
+
+.bakery-circle {
+    width: 245px;
+    height: 245px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(27, 25, 23, 0.3);
+
+    border-radius: 50%;
+
+    transform: rotate(-8deg);
+}
+
+.bakery-circle span {
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: var(--brown);
+}
+
+.bakery-circle strong {
+    margin: 12px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 58px;
+
+    font-weight: 500;
+}
+
+
+/* LIST */
+
+.bakery-list {
+    width: 100%;
+
+    margin-top: 40px;
+}
+
+.bakery-list > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 13px 0;
+
+    border-top: 1px solid rgba(27, 25, 23, 0.18);
+}
+
+.bakery-list span {
+    color: var(--brown);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.bakery-list p {
+    font-size: 11px;
+}
+
+
+/* NUMBER */
+
+.bakery-number {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 22px;
+    right: 25px;
+
+    color: rgba(27, 25, 23, 0.45);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about {
     padding: 120px 0;
@@ -689,6 +804,8 @@ img {
 .about-image img {
     width: 100%;
     height: auto;
+
+    object-fit: contain;
 }
 
 .about-content .section-label {
@@ -700,9 +817,9 @@ img {
 
     font-size: clamp(48px, 5vw, 72px);
 
-    font-weight: 500;
-
     line-height: 0.98;
+
+    font-weight: 500;
 
     letter-spacing: -2px;
 }
@@ -716,7 +833,7 @@ img {
 
     margin-top: 28px;
 
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
 
     font-size: 15px;
 }
@@ -728,7 +845,7 @@ img {
 
     padding-bottom: 7px;
 
-    border-bottom: 1px solid rgba(255,255,255,0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 
     font-size: 12px;
 }
@@ -745,20 +862,17 @@ img {
 }
 
 .contacts h2 {
-    font-family: "Playfair Display", serif;
-
     font-size: clamp(55px, 7vw, 95px);
-
-    font-weight: 500;
-
-    line-height: 1;
-
-    letter-spacing: -2px;
 }
 
 .contacts h2 em {
     color: var(--brown);
+
+    font-style: italic;
 }
+
+
+/* CONTACT GRID */
 
 .contacts-grid {
     display: grid;
@@ -768,6 +882,7 @@ img {
     gap: 30px;
 
     margin-top: 90px;
+
     padding-top: 30px;
 
     border-top: 1px solid var(--border);
@@ -775,6 +890,7 @@ img {
 
 .contact-item {
     display: flex;
+
     flex-direction: column;
 }
 
@@ -784,9 +900,10 @@ img {
     color: var(--brown);
 
     font-size: 9px;
-    font-weight: 600;
 
     letter-spacing: 2px;
+
+    font-weight: 600;
 }
 
 .contact-item p,
@@ -795,6 +912,8 @@ img {
 }
 
 .contact-item a {
+    margin-bottom: 8px;
+
     transition: 0.25s ease;
 }
 
@@ -817,7 +936,9 @@ img {
 
 .footer .container {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
@@ -836,9 +957,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
 @media (max-width: 950px) {
 
@@ -848,9 +969,11 @@ img {
         width: min(100% - 40px, 700px);
     }
 
+
     .navigation {
         display: none;
     }
+
 
     .intro-content {
         grid-template-columns: 1fr;
@@ -858,11 +981,13 @@ img {
         gap: 40px;
     }
 
+
     .section-heading {
         flex-direction: column;
 
         align-items: flex-start;
     }
+
 
     .menu-showcase {
         grid-template-columns: 1fr 1fr;
@@ -870,17 +995,6 @@ img {
         gap: 20px;
     }
 
-    .bakery-content {
-        grid-template-columns: 1fr;
-
-        gap: 55px;
-
-        padding: 65px 45px;
-    }
-
-    .bakery-description {
-        max-width: 550px;
-    }
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -888,17 +1002,43 @@ img {
         gap: 50px;
     }
 
+
     .contacts-grid {
         grid-template-columns: 1fr;
 
         gap: 35px;
     }
+
+
+    /* BAKERY */
+
+    .bakery-card {
+        grid-template-columns: 1fr 0.85fr;
+    }
+
+    .bakery-card-left {
+        padding: 55px;
+    }
+
+    .bakery-card-right {
+        padding: 35px;
+    }
+
+    .bakery-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .bakery-circle strong {
+        font-size: 48px;
+    }
+
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
@@ -1065,77 +1205,85 @@ img {
     }
 
 
-    /* BAKERY */
+    /* =========================
+       BAKERY MOBILE
+    ========================= */
 
     .bakery {
-        padding: 15px 0 80px;
+        padding: 70px 0 90px;
     }
 
-    .bakery-header {
-        padding: 25px 22px 0;
+
+    .bakery-card {
+        display: block;
     }
 
-    .bakery-header h2 {
-        font-size: 48px;
 
-        letter-spacing: -2px;
+    .bakery-card-left {
+        padding: 45px 28px 55px;
     }
 
-    .bakery-number {
+
+    .bakery-badge {
+        margin-bottom: 25px;
+
         font-size: 8px;
     }
 
-    .bakery-content {
-        display: block;
 
-        padding: 55px 22px 60px;
+    .bakery-card h2 {
+        font-size: 54px;
+
+        letter-spacing: -2.5px;
     }
 
-    .bakery-description {
-        margin-bottom: 50px;
+
+    .bakery-line {
+        margin: 28px 0 20px;
     }
 
-    .bakery-description .bakery-lead {
-        font-size: 16px;
-    }
 
-    .bakery-description p {
+    .bakery-card-left > p {
         font-size: 13px;
     }
 
-    .bakery-details {
-        grid-template-columns: 1fr;
 
-        gap: 25px;
+    .bakery-button {
+        width: 180px;
+
+        margin-top: 25px;
     }
 
-    .bakery-detail {
-        padding-top: 15px;
+
+    .bakery-card-right {
+        padding: 45px 28px;
     }
 
-    .bakery-detail p {
-        font-size: 12px;
+
+    .bakery-circle {
+        width: 190px;
+        height: 190px;
     }
 
-    .bakery-footer {
-        padding: 18px 22px;
+
+    .bakery-circle strong {
+        font-size: 46px;
     }
 
-    .bakery-footer > span {
-        font-size: 6px;
+
+    .bakery-list {
+        margin-top: 35px;
     }
 
-    .bakery-footer a {
-        gap: 10px;
 
-        font-size: 10px;
+    .bakery-list > div {
+        padding: 12px 0;
     }
 
-    .bakery-section::before {
-        right: -20px;
-        top: 150px;
 
-        font-size: 110px;
+    .bakery-number {
+        top: 17px;
+        right: 17px;
     }
 
 
@@ -1211,3 +1359,9 @@ img {
     }
 
 }
+
+Это один цельный CSS, а не кусок, который надо угадывать куда вставлять. После вставки у тебя структура будет:
+
+Hero → Welcome → Kitchen & Bar → отдельный Bakery-блок → About → Contacts → Footer.
+
+Если вставишь этот CSS целиком вместе с HTML выше, ".bakery-card" будет именно отдельной большой визуальной карточкой, а не просто текстом на фоне.
