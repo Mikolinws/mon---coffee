@@ -293,7 +293,7 @@ img {
 
 
 /* =========================
-   MENU SHOWCASE
+   KITCHEN / BAR
 ========================= */
 
 .menu-showcase {
@@ -303,25 +303,27 @@ img {
     align-items: stretch;
 }
 
-
-/* =========================
-   MENU PHOTOS
-   БЕЗ ОБРЕЗКИ
-========================= */
-
 .showcase-image {
     position: relative;
+
+    /* БОЛЬШАЯ РАМКА */
     width: 100%;
-    height: auto;
+    height: 650px;
+
     overflow: hidden;
     background: #d8d0c6;
 }
 
 .showcase-image img {
     display: block;
+
     width: 100%;
-    height: auto;
+    height: 100%;
+
+    /* Картинка полностью помещается в рамку */
     object-fit: contain;
+    object-position: center;
+
     transition: transform 0.6s ease;
 }
 
@@ -333,17 +335,20 @@ img {
     content: "";
     position: absolute;
     inset: 0;
+
     background: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.65),
         rgba(0, 0, 0, 0.02)
     );
+
     pointer-events: none;
 }
 
 .showcase-caption {
     position: absolute;
     z-index: 2;
+
     left: 28px;
     right: 28px;
     bottom: 25px;
@@ -373,7 +378,7 @@ img {
 ========================= */
 
 .order-card {
-    min-height: 520px;
+    min-height: 650px;
     padding: 45px 34px;
 
     display: flex;
@@ -394,6 +399,7 @@ img {
 
 .order-card h3 {
     margin-bottom: 25px;
+
     font-family: "Playfair Display", serif;
     font-size: 38px;
     font-weight: 500;
@@ -416,22 +422,21 @@ img {
 .order-card a {
     display: inline-block;
     width: fit-content;
+
     margin-top: 12px;
     padding-bottom: 6px;
+
     border-bottom: 1px solid var(--brown);
+
     font-size: 12px;
     font-weight: 600;
+
     transition: 0.25s ease;
 }
 
 .order-card a:hover {
     color: var(--brown);
 }
-
-
-/* =========================
-   MENU BUTTON
-========================= */
 
 .menu-button {
     margin-top: 45px;
@@ -519,8 +524,10 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
     margin-top: 90px;
     padding-top: 30px;
+
     border-top: 1px solid var(--border);
 }
 
@@ -611,17 +618,9 @@ img {
         gap: 25px;
     }
 
-    /* Никакой фиксированной высоты */
     .showcase-image {
         width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-
-    .showcase-image img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
+        height: 550px;
     }
 
     .order-card {
@@ -766,29 +765,26 @@ img {
     }
 
 
-    /* MOBILE MENU */
+    /* KITCHEN / BAR */
 
     .menu-showcase {
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 24px;
+        gap: 20px;
     }
-
-
-    /* КАРТИНКИ ЦЕЛИКОМ */
 
     .showcase-image {
         width: 100%;
-        height: auto;
+        height: 500px;
         overflow: hidden;
     }
 
     .showcase-image img {
-        display: block;
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: contain;
+        object-position: center;
     }
 
 
