@@ -57,9 +57,7 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 10;
 
     padding: 28px 0;
@@ -183,7 +181,6 @@ img {
 
 .hero-label {
     margin-bottom: 25px;
-
     opacity: 0.75;
 }
 
@@ -484,101 +481,30 @@ img {
 }
 
 
-.menu-button {
-    margin-top: 40px;
-}
 
+/* =========================
+   BAKERY NOTE
+========================= */
 
-
-/* ==================================================
-   BAKERY
-================================================== */
-
-.bakery {
-    padding: 100px 0 150px;
-
-    background: var(--bg);
-}
-
-
-.bakery-card {
-    position: relative;
-
+.bakery-note {
     display: grid;
 
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 180px 1fr;
 
-    min-height: 540px;
+    gap: 50px;
 
-    overflow: hidden;
+    margin-top: 55px;
 
-    background: #ddd0c2;
+    padding-top: 25px;
+
+    border-top: 1px solid var(--border);
 }
 
 
-/* =========================
-   ЛЕВАЯ ЧАСТЬ
-========================= */
+.bakery-note-label {
+    color: var(--brown);
 
-.bakery-card-left {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 45px;
-
-    background: #ddd0c2;
-}
-
-
-/* =========================
-   НАСТОЯЩАЯ РАМКА
-========================= */
-
-.bakery-window {
-    width: 100%;
-
-    max-width: 520px;
-
-    padding: 55px 45px;
-
-    border: 2px solid #806b57;
-
-    background: rgba(255, 255, 255, 0.12);
-
-    text-align: center;
-
-    box-shadow:
-        inset 0 0 0 8px rgba(255, 255, 255, 0.08);
-
-    transition: 0.3s ease;
-}
-
-
-.bakery-window:hover {
-    background: rgba(255, 255, 255, 0.18);
-
-    transform: translateY(-3px);
-}
-
-
-/* =========================
-   BAKERY BADGE
-========================= */
-
-.bakery-window .bakery-badge {
-    display: inline-block;
-
-    margin-bottom: 25px;
-
-    padding: 7px 12px;
-
-    border: 1px solid #806b57;
-
-    color: #806b57;
-
-    font-size: 8px;
+    font-size: 9px;
 
     font-weight: 600;
 
@@ -586,217 +512,26 @@ img {
 }
 
 
-/* =========================
-   TITLE
-========================= */
-
-.bakery-window h2 {
-    margin: 0;
-
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(55px, 6vw, 85px);
-
-    font-weight: 500;
-
-    line-height: 0.9;
-
-    letter-spacing: -3px;
-}
-
-
-.bakery-window h2 em {
-    color: var(--brown);
-
-    font-style: italic;
-}
-
-
-/* =========================
-   LINE
-========================= */
-
-.bakery-window .bakery-line {
-    width: 65px;
-
-    height: 1px;
-
-    margin: 28px auto 22px;
-
-    background: var(--brown);
-}
-
-
-/* =========================
-   TEXT
-========================= */
-
-.bakery-window > p {
-    max-width: 340px;
-
-    margin: 0 auto;
+.bakery-note p {
+    max-width: 650px;
 
     color: var(--muted);
 
     font-size: 13px;
 
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 
-/* =========================
-   BUTTON
-========================= */
-
-.bakery-window .bakery-button {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    width: 180px;
-
-    margin: 27px auto 0;
-
-    padding: 14px 17px;
-
-    background: var(--dark);
-
-    color: var(--white);
-
-    font-size: 10px;
+.bakery-note strong {
+    color: var(--dark);
 
     font-weight: 600;
-
-    transition: 0.25s ease;
 }
 
 
-.bakery-window .bakery-button span:last-child {
-    font-size: 17px;
-}
-
-
-.bakery-window .bakery-button:hover {
-    background: var(--brown);
-
-    transform: translateY(-2px);
-}
-
-
-
-/* =========================
-   ПРАВАЯ ЧАСТЬ
-========================= */
-
-.bakery-card-right {
-    position: relative;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 55px;
-
-    background: #cbbbaa;
-}
-
-
-.bakery-circle {
-    width: 245px;
-    height: 245px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid rgba(27, 25, 23, 0.3);
-
-    border-radius: 50%;
-
-    transform: rotate(-8deg);
-}
-
-
-.bakery-circle span {
-    font-size: 8px;
-
-    font-weight: 600;
-
-    letter-spacing: 3px;
-
-    color: var(--brown);
-}
-
-
-.bakery-circle strong {
-    margin: 12px 0;
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 58px;
-
-    font-weight: 500;
-}
-
-
-.bakery-list {
-    width: 100%;
-
+.menu-button {
     margin-top: 40px;
-}
-
-
-.bakery-list > div {
-    display: flex;
-
-    align-items: center;
-
-    gap: 18px;
-
-    padding: 13px 0;
-
-    border-top: 1px solid rgba(27, 25, 23, 0.18);
-}
-
-
-.bakery-list span {
-    color: var(--brown);
-
-    font-size: 9px;
-
-    font-weight: 600;
-
-    letter-spacing: 1px;
-}
-
-
-.bakery-list p {
-    font-size: 11px;
-}
-
-
-.bakery-number {
-    position: absolute;
-
-    z-index: 5;
-
-    top: 22px;
-    right: 25px;
-
-    color: rgba(27, 25, 23, 0.45);
-
-    font-size: 9px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
 }
 
 
@@ -1000,9 +735,9 @@ img {
 
 
 
-/* ==================================================
+/* =========================
    TABLET
-================================================== */
+========================= */
 
 @media (max-width: 950px) {
 
@@ -1039,21 +774,6 @@ img {
     }
 
 
-    .bakery-card {
-        grid-template-columns: 1fr;
-    }
-
-
-    .bakery-card-left {
-        min-height: 550px;
-    }
-
-
-    .bakery-card-right {
-        min-height: 500px;
-    }
-
-
     .about-grid {
         grid-template-columns: 1fr;
 
@@ -1071,9 +791,9 @@ img {
 
 
 
-/* ==================================================
+/* =========================
    MOBILE
-================================================== */
+========================= */
 
 @media (max-width: 600px) {
 
@@ -1261,71 +981,29 @@ img {
     }
 
 
+
+    /* BAKERY NOTE */
+
+    .bakery-note {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 35px;
+
+        padding-top: 20px;
+    }
+
+
+    .bakery-note p {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+
     .menu-button {
         margin-top: 30px;
-    }
-
-
-
-    /* BAKERY */
-
-    .bakery {
-        padding: 70px 0 90px;
-    }
-
-
-    .bakery-card {
-        grid-template-columns: 1fr;
-    }
-
-
-    .bakery-card-left {
-        min-height: auto;
-
-        padding: 20px;
-    }
-
-
-    .bakery-window {
-        padding: 45px 22px;
-
-        border-width: 2px;
-    }
-
-
-    .bakery-window h2 {
-        font-size: 50px;
-
-        letter-spacing: -2px;
-    }
-
-
-    .bakery-window > p {
-        font-size: 12px;
-    }
-
-
-    .bakery-card-right {
-        min-height: 450px;
-
-        padding: 40px 25px;
-    }
-
-
-    .bakery-circle {
-        width: 200px;
-        height: 200px;
-    }
-
-
-    .bakery-circle strong {
-        font-size: 48px;
-    }
-
-
-    .bakery-number {
-        top: 15px;
-        right: 17px;
     }
 
 
